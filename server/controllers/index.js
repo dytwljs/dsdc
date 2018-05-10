@@ -20,7 +20,7 @@ const mapDir = d => {
     files.forEach(file => {
         if (path.extname(file) === '.js') {
             tree[path.basename(file, '.js')] = require(path.join(d, file))
-            
+            var a="testGit"
         }
     })
 

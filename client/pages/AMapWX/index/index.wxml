@@ -1,0 +1,16 @@
+<view class="map_container">
+  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" markers="{{markers}}" polyline="{{polyline}}"></map>  
+</view>
+<view class="map_text">
+    <view class="text">{{distance}}</view>
+    <view class="text">{{cost}}</view>
+    <text class="h1">所在位置：{{textData.name}}</text>
+    <text>{{textData.desc}}</text>
+    <text class="h1">目的地位置：{{addressName}}</text>
+    <text>{{addressLocation}}</text>
+</view>
+<view class="section">
+  <!-- <input bindtap='' placeholder="搜索目的地" focus="true" bindtap='bindtrue'/> -->
+  <button bindtap='bindtrue' type='primary'>打开位置</button>
+</view>
+

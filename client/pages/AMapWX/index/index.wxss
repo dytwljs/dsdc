@@ -11,7 +11,7 @@
 }
 .map_text{
   position: absolute;
-  top: 680rpx;
+  top: 766rpx;
   left: 0;
   right: 0;
   bottom: 0px;
@@ -60,7 +60,7 @@ text{
   position:absolute;
   height: 90px;
   bottom: 0px;
-  top: 880rpx;
+  top: 930rpx;
   left: 0px;
   right: 0px;
 }

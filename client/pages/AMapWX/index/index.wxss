@@ -7,10 +7,11 @@
 }
 .map{
   width: 100%;
-  height: 100%;
+  height: 72%;
 }
 .map_text{
   position: absolute;
+  top: 680rpx;
   left: 0;
   right: 0;
   bottom: 0px;
@@ -24,7 +25,7 @@ text{
   font-size:12px;
 }
 .h1{
-  margin: 15px 0;
+  margin: 10rpx 0;
   font-size:15px;
 }
 .section{
@@ -39,9 +40,9 @@ text{
   border-radius: 3px;
   padding: 0 5px;
 }
-.btn_top{
+/* .btn_top{
   top: 1200rpx;
-}
+} */
 .btn_sezi{
   position: fixed;
   width: 370rpx;
@@ -55,17 +56,16 @@ text{
   right: 6rpx;
 }
 
-
 .text_box{
   position:absolute;
   height: 90px;
   bottom: 0px;
-  top: 1270rpx;
+  top: 880rpx;
   left: 0px;
   right: 0px;
 }
 .text_box .text{
-  margin: 15px;
+  margin: 10px;
 }
 .detail_button{
   position:absolute;

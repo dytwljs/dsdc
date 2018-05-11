@@ -59,16 +59,30 @@ Page({
     var addressLocation = that.data.AddressLocation;
     console.log(addressName);
     console.log(addressLocation);
-    if (addressName != null ){
+    
+    if (addressLocation.length==0){
+        wx.showModal({
+          title: '提示',
+          content: '您寻找的范围过大，请重新输入精确位置',
+        })
+    }
+    if (addressName != null && addressLocation.length != 0){
       wx.setStorageSync("AddressName", addressName);
       console.log("设置成功!")
-     } 
-    if (addressLocation != null){
       wx.setStorageSync("AddressLocation", addressLocation);
       console.log("设置成功2!")
+      wx.redirectTo({
+        url: '/pages/AMapWX/index/index',
+      })
     }
-    wx.navigateTo({
-      url: '/pages/AMapWX/index/index',
-    })
+    // if (addressName != null ){
+    //   wx.setStorageSync("AddressName", addressName);
+    //   console.log("设置成功!")
+    //  }
+    // if (addressLocation.length != 0){
+    //   wx.setStorageSync("AddressLocation", addressLocation);
+    //   console.log("设置成功2!")
+    // }
+    
   }
 })

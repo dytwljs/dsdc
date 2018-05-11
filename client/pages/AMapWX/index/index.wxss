@@ -1,6 +1,6 @@
 .map_container{
   position: absolute;
-  top: 112rpx;
+  top: 96rpx;
   bottom: 80px;
   left: 0;
   right: 0;
@@ -38,4 +38,43 @@ text{
   height:30px;
   border-radius: 3px;
   padding: 0 5px;
+}
+.btn_top{
+  top: 1200rpx;
+}
+.btn_sezi{
+  position: fixed;
+  width: 370rpx;
+  height: 60rox;
+  left: 6rpx;
+}
+.btn_sezi1{
+  width: 370rpx;
+  height: 60rox;
+  position: fixed;
+  right: 6rpx;
+}
+
+
+.text_box{
+  position:absolute;
+  height: 90px;
+  bottom: 0px;
+  top: 1270rpx;
+  left: 0px;
+  right: 0px;
+}
+.text_box .text{
+  margin: 15px;
+}
+.detail_button{
+  position:absolute;
+  bottom: 30px;
+  right: 10px;
+  padding: 3px 5px;
+  color: #fff;
+  background: #0091ff;
+  width:50px;
+  text-align:center;
+  border-radius:5px;
 }

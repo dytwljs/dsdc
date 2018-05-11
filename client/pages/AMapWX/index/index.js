@@ -37,7 +37,7 @@ Page({
         var list = addressLocation.split(",");
         console.log(list[0]);
         console.log(list[1]);
-        
+      
         //坐标
         var marker = [{
           id: data[0].id,
@@ -58,7 +58,13 @@ Page({
         var DdloCation = data[0].longitude+","+data[0].latitude;
         //目标位置经纬度
         var DzaddressLocation = addressLocation;
-        
+        //避免开打地图就有路线规划 所以第一次加载页面就清除缓存
+        wx.removeStorageSync("AddressName");
+        wx.removeStorageSync("AddressLocation");
+
+        //现在存详情页需要的经纬度缓存
+        wx.setStorageSync("DdloCation", DdloCation);
+        wx.setStorageSync("DzaddressLocation", DzaddressLocation);
         // -----------------------
         myAmapFun.getDrivingRoute({
           origin: "" + DdloCation+"",
@@ -132,11 +138,21 @@ Page({
   bindtrue: function () {
     // wx.removeStorageSync("AddressName");
     // wx.removeStorageSync("AddressLocation");
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/AMapWX/DHMap/DHMap',
       success: function (res) {},
       fail: function (res) { },
       complete: function (res) { },
     })
-  }
+  },
+  closeSession:function(){
+    wx.removeStorageSync("AddressName");
+    wx.removeStorageSync("AddressLocation");
+    console.log("地址，经纬度缓存已清除!");
+  },
+  goDetail: function () {
+    wx.navigateTo({
+      url: '../particular/particular'
+    })
+  },
 })

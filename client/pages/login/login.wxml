@@ -1,0 +1,11 @@
+ <view>
+    <view wx:if="{{user.nickName==null}}">
+      <button open-type="getUserInfo" bindgetuserinfo='OpenUserInfo' class='btn_border_colse' >登陆</button>
+    </view>
+ {{user.nickName}}
+  <!-- <image src='{{user.avatarUrl}}'></image>  -->
+  <view wx:if="{{user.nickName!=null}}">
+    <button open-type='getPhoneNumber' bindgetphonenumber='getPhoneNumber'>获取手机号</button>
+  </view>
+ </view>
+

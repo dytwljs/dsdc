@@ -12,5 +12,6 @@
 	},
 	"appid": "wx1ca22e3163a07ec6",
 	"projectname": "DiaTaking",
+	"compileType": "miniprogram",
 	"condition": {}
 }

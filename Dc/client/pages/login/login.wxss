@@ -1,0 +1,14 @@
+/* pages/login/login.wxss */
+
+.btn_border_colse{ 
+  border:none;
+  }
+ 
+
+
+ button::after{
+  border:none;
+}
+button{
+   background:none;
+} 

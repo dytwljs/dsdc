@@ -1,0 +1,18 @@
+{
+  "pages":[
+    "pages/AMapWX/index/index",
+    "pages/login/login",
+    
+    "pages/AMapWX/DHMap/DHMap",
+    "pages/AMapWX/particular/particular",
+    "pages/index/index",
+    "pages/addCgi/addCgi"
+  ],
+  "window":{
+    "backgroundColor":"#F6F6F6",
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "Wafer Quick Start",
+    "navigationBarTextStyle":"black"
+  }
+}

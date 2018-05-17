@@ -100,7 +100,7 @@ Page({
             success: function(res){
                 util.showBusy('正在上传')
                 var filePath = res.tempFilePaths[0]
-
+console.log(config.service.uploadUrl)
                 // 上传图片
                 wx.uploadFile({
                     url: config.service.uploadUrl,

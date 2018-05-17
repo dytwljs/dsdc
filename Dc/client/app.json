@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/AMapWX/index/index",
     "pages/login/login",
+    "pages/AMapWX/index/index",
     
     "pages/AMapWX/DHMap/DHMap",
     "pages/AMapWX/particular/particular",

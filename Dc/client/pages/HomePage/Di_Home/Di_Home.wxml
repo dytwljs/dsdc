@@ -1,0 +1,53 @@
+<view>
+  <!--头部  -->
+ <view class='view_T'>
+    <view class='userImg'>
+     <text class='iconfont .icon-weibiaoti-_huabanfuben' ></text>
+    </view>
+    <view>
+      <text class='text_now'>现在</text>
+    </view>
+    <text class='text_small'>|</text> 
+    <view bindtap='MakeCar'>
+      <text class='text_make'>预约</text> 
+    </view>
+    <view class='img_order'>
+     <text class='iconfont .icon-dingdan'></text>
+    </view>
+  </view>
+  <!-- 地图  -->
+  <view>
+     <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" markers="{{markers}}" polyline="{{polyline}}"></map>   
+  </view> 
+  <!--选择时间  -->
+  <view class='view_Datetime'>
+    <view class="picker">
+      出发时间: {{date}}
+    </view>
+  </view>
+  
+  <!--起始位置-->
+  <!--起点  -->
+  <view wx:if="{{addressName.length<1}}">
+    
+    <view class='text_box'>
+      <text class='iconfont .icon-dian'></text>
+      {{textData.name}},{{textData.desc}}
+    </view>
+    <!--终点  -->
+    <view class='text_box1' bindtap='bindtrue'>
+      <text class='iconfont .icon-dian'></text>
+      <text class='text_od'>您要去哪儿？</text>
+        {{addressName}}
+      <text>{{addressLocation}}</text>
+    </view>
+  </view>
+  <!--立即叫车--><!--style='text-align:center'-->
+  <view class='call_car_money' wx:if="{{addressName}}" style='text-align:center'>
+    <text class='text_car_money'>预计里程:{{distance}}\n预计金额:{{cost}}</text>
+  </view>
+  <view class='call_car' wx:if="{{addressName}}">
+    <text class='text_call_car'>立即叫车</text>
+  </view>
+  
+</view>

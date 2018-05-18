@@ -1,5 +1,5 @@
 const fs = require('fs')
-const qcloud = require('wafer-node-sdk')
+// const qcloud = require('wafer-node-sdk')
 
 // 获取基础配置
 const configs = require('./config')
@@ -33,4 +33,5 @@ const sdkConfig = (() => {
 
 // 初始化 SDK
 // 将基础配置和 sdk.config 合并传入 SDK 并导出初始化完成的 SDK
-module.exports = qcloud(Object.assign({}, sdkConfig, configs))
+//module.exports = qcloud(Object.assign({}, sdkConfig, configs))
+module.exports=function qcloud(obj){}

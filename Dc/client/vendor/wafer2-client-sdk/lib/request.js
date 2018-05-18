@@ -60,6 +60,7 @@ function request(options) {
     var hasRetried = false;
 
     if (requireLogin) {
+        debugger
         doRequestWithLogin();
     } else {
         doRequest();
@@ -86,6 +87,7 @@ function request(options) {
                     // 如果是登录态无效，并且还没重试过，会尝试登录后刷新凭据重新请求
                     if (!hasRetried) {
                         hasRetried = true;
+                        debugger
                         doRequestWithLogin();
                         return;
                     }

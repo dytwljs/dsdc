@@ -11,13 +11,14 @@ Page({
         requestResult: ''
     },
 
+    
     // 用户登录示例
     login: function() {
         if (this.data.logged) return
 
         util.showBusy('正在登录')
         var that = this
-
+//debugger
         // 调用登录接口
         qcloud.login({
             success(result) {
@@ -100,7 +101,7 @@ Page({
             success: function(res){
                 util.showBusy('正在上传')
                 var filePath = res.tempFilePaths[0]
-
+//console.log(config.service.uploadUrl)
                 // 上传图片
                 wx.uploadFile({
                     url: config.service.uploadUrl,

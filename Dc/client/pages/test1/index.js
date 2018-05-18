@@ -17,12 +17,6 @@ Page({
   onLoad: function (options) {
     this.data.order.name="cccc"
     httpClient.Get(config.service.host+'/weapp/order',{name:'sfdsfdsf'})
-<<<<<<< HEAD:Dc/client/pages/test/index.js
-    var a="a"
-    
-
-=======
->>>>>>> 43b48a5b5288a671e2dd8607940e14256029fa2f:Dc/client/pages/test1/index.js
   },
 
   /**

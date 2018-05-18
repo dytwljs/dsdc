@@ -1,4 +1,8 @@
 /**app.wxss**/
+@import 'libs/iconCss/My.wxss';
+@import 'libs/iconCss/Order.wxss';
+@import 'libs/iconCss/dot.wxss';
+@import 'libs/iconCss/weixin.wxss';
 .container {
   display: flex;
   flex-direction: column;

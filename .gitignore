@@ -61,3 +61,6 @@ typings/
 .next
 Dc/client/app.json
 Dc/client/pages/AMapWX/index/index.wxss
+Dc/client/app.json
+Dc/client/pages/test/test.js
+Dc/client/pages/test/test.wxml

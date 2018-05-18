@@ -1,11 +1,14 @@
 {
   "pages":[
-    "pages/AMapWX/index/index",
     "pages/login/login",
+    "pages/AMapWX/index/index",
+    "pages/index/index",
+    
+    
     
     "pages/AMapWX/DHMap/DHMap",
     "pages/AMapWX/particular/particular",
-    "pages/index/index",
+    
     "pages/addCgi/addCgi"
   ],
   "window":{

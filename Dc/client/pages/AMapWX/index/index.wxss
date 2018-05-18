@@ -2,7 +2,7 @@
   position: absolute;
   top: 96rpx;
   bottom: 80px;
-  left: 0;
+  left: 0; 
   right: 0;
 }
 .map{

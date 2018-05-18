@@ -1,24 +1,12 @@
 {
-  "pages":[
-<<<<<<< HEAD
-    "pages/login/login",
-    "pages/AMapWX/index/index",
-    "pages/index/index",
-    
-    
-    
-    "pages/AMapWX/DHMap/DHMap",
-    "pages/AMapWX/particular/particular",
-    
-=======
+  "pages":[ 
     "pages/test/index",
     "pages/index/index",
     "pages/login/login",
     "pages/AMapWX/index/index",
-    
     "pages/AMapWX/DHMap/DHMap",
     "pages/AMapWX/particular/particular",
->>>>>>> 431fc522a071e31028cad5012886e12c7d9bbe92
+    
     "pages/addCgi/addCgi"
   ],
   "window":{

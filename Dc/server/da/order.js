@@ -1,7 +1,7 @@
-const mysql=require('../mysql')
+const mysql=require('./mysql')
 const uuidGenerator = require('uuid/v4')
 const moment = require('moment')
-const ERRORS = require('../constants').ERRORS
+const ERRORS = require('./constants').ERRORS
 
 function createOrder(userInfo,orderInit){
     /*
@@ -20,7 +20,41 @@ function createOrder(userInfo,orderInit){
   `ENCRYPT` int(11) NOT NULL COMMENT '坐标加密标识_1 : GCJ—02 测绘局标准2 : WGS84 GPS 标准3: BD-  09 百度标准4: CGCS2000北斗标准0:其他',
   `FareType` varchar(16) NOT NULL COMMENT '运价类型编码',
     */
-
+    var name='bb'
+    var id=9999
+    // 查重并决定是插入还是更新数据
+    return mysql('test').count('id').where({
+        id
+    })
+    .then(res => {
+        // 如果存在用户则更新
+        if (res[0].name) {
+            return mysql('test').update({
+                bb
+            }).where({
+                id
+            })
+        } else {
+            return mysql('test').insert({
+                name
+            })
+        }
+    })
+    .then(() => ({
+        id: id,
+        name: name
+    }))
+    .catch(e => {
+        debug('%s: %O', ERRORS.DBERR.ERR_WHEN_INSERT_TO_DB, e)
+        throw new Error(`${ERRORS.DBERR.ERR_WHEN_INSERT_TO_DB}\n${e}`)
+    })
     
 
+}
+function test(name){
+
+}
+module.exports={
+    createOrder,
+    test
 }

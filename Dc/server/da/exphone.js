@@ -11,22 +11,17 @@ async function getByPhone(UserOpen_id,ctx){
    await mysql('tuser').select('*').then(res=>{
         // console.log(res[1])
         result=JSON.stringify(res[3]);
-        return result
         console.log(result)
-        // console.log(ctx)
         ctx.body=result
-        
-        // for(var i=0; i< res.length;i++){
-        //     //  console.log(res[i]);
-        //     return res[i]
-        // }
+        return result
+
     })
     .catch(e => {
         debug('%s: %O', ERRORS.DBERR.ERR_WHEN_INSERT_TO_DB, e)
         throw new Error(`${ERRORS.DBERR.ERR_WHEN_INSERT_TO_DB}\n${e}`)
     })
     console.log("result->"+result);
-    return result
+  //  return result
 }
 
 

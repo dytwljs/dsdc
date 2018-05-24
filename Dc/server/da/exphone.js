@@ -7,14 +7,13 @@ const debug=require('debug')('cbd')
 
 async function getByPhone(UserOpen_id,ctx){
     //console.log(UserOpen_id);
-    var result=null
+   var result=null
    await mysql('tuser').select('*').then(res=>{
         // console.log(res[1])
         result=JSON.stringify(res[3]);
         console.log(result)
         ctx.body=result
-        return result
-
+        // return result
     })
     .catch(e => {
         debug('%s: %O', ERRORS.DBERR.ERR_WHEN_INSERT_TO_DB, e)
@@ -28,3 +27,4 @@ async function getByPhone(UserOpen_id,ctx){
 module.exports={
     getByPhone
 }
+

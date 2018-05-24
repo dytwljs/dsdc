@@ -7,13 +7,10 @@ async function get(ctx) {
     var id = ctx.query.ids
     //   console.log(id)
     
-      await  daOrder.getByPhone(id,ctx)
+    await  daOrder.getByPhone(id,ctx)
     // console.log(".......")
     // console.log(a)
-  // ctx.body=a;
-   
-
-
+    // ctx.body=a;
 }
 
 

@@ -2,7 +2,11 @@ const mysql=require('./mysql')
 const uuidGenerator = require('uuid/v4')
 const moment = require('moment')
 const ERRORS = require('./constants').ERRORS
+<<<<<<< HEAD
 const debug =require('debug')('da_access_order')
+=======
+const debug=require('debug')('cbd')
+>>>>>>> 98ef78d204f6b44a82889cae1c1aa02a7e3ca74a
 
 function createOrder(userInfo,orderInit){
     /*
@@ -21,30 +25,39 @@ function createOrder(userInfo,orderInit){
   `ENCRYPT` int(11) NOT NULL COMMENT '坐标加密标识_1 : GCJ—02 测绘局标准2 : WGS84 GPS 标准3: BD-  09 百度标准4: CGCS2000北斗标准0:其他',
   `FareType` varchar(16) NOT NULL COMMENT '运价类型编码',
     */
-    var name='bb'
-    var id=9999
+    var username=orderInit
+    var id=userInfo
+    
+    console.log(userInfo)
+    console.log(orderInit)
+    var a = mysql('tuser').select('*').then(res => {
+        console.log(res)
+
+    })
+    //  console.log(a)
     // 查重并决定是插入还是更新数据
-    return mysql('test').count('id').where({
+    return mysql('tuser').count('id').where({
         id
     })
     .then(res => {
+        
         // 如果存在用户则更新
-        if (res[0].name) {
-            return mysql('test').update({
-                bb
+        if (res[0].username) {
+            return mysql('tuser').update({
+                username
             }).where({
                 id
             })
         } else {
-            return mysql('test').insert({
-                name
+            return mysql('tuser').insert({
+                username
             })
         }
     })
-    .then(() => ({
-        id: id,
-        name: name
-    }))
+    // .then(() => ({
+    //     id: id,
+    //     username: username
+    // }))
     .catch(e => {
         debug('%s: %O', ERRORS.DBERR.ERR_WHEN_INSERT_TO_DB, e)
         throw new Error(`${ERRORS.DBERR.ERR_WHEN_INSERT_TO_DB}\n${e}`)
@@ -52,7 +65,7 @@ function createOrder(userInfo,orderInit){
     
 
 }
-function test(name){
+function test(username){
 
 }
 module.exports={

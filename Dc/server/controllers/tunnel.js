@@ -74,7 +74,7 @@ function onConnect (tunnelId) {
  */
 function onMessage (tunnelId, type, content) {
     console.log(`[onMessage] =>`, { tunnelId, type, content })
-
+    console.log(connectedTunnelIds)
     switch (type) {
         case 'speak':
             if (tunnelId in userMap) {

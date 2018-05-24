@@ -12,6 +12,11 @@ async function get (ctx, next) {
     ctx.body = a
 }
 async function post (ctx, next) {
+<<<<<<< HEAD
+
+    daOrder.createOrder(null,null)
+=======
+>>>>>>> 98ef78d204f6b44a82889cae1c1aa02a7e3ca74a
     ctx.body = 'success'
 }
 module.exports= {

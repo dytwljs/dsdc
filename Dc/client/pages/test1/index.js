@@ -8,7 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    order:{}
+    order:{},
+    result:null
   },
 
   /**
@@ -16,7 +17,11 @@ Page({
    */
   onLoad: function (options) {
     this.data.order.name="cccc"
-    httpClient.Get(config.service.host+'/weapp/order',{name:'sfdsfdsf'})
+   httpClient.Get(config.service.host+'/weapp/order',{name:'sfdsfdsf'})
+   this.setData({
+     result:"sss"
+   })
+   // httpClient.Post(config.service.host+'/weapp/order',{name:'sfdsfdsf'})
   },
 
   /**

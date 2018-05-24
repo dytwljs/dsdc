@@ -4,6 +4,7 @@ Page({
   data: {
     dateTimeArray1: null,
     dateTime1: null,
+    dateText:null
   },
   onLoad() {
     // 获取完整的年月日 时分秒，以及默认显示的数组
@@ -23,6 +24,7 @@ Page({
  
   changeDateTime1(e) {
     this.setData({ dateTime1: e.detail.value });
+    //this.setData({ dateText:e.detail.value});
   },
   changeDateTimeColumn1(e) {
     var arr = this.data.dateTime1, dateArr = this.data.dateTimeArray1;
@@ -30,8 +32,10 @@ Page({
     dateArr[2] = dateTimePicker.getMonthDay(dateArr[0][arr[0]], dateArr[1][arr[1]]);
     this.setData({
       dateTimeArray1: dateArr,
-      dateTime1: arr
+      dateTime1: arr,
+      dateText: dateArr[0][arr[0]]
     });
+    console.log(this.data.dateText);
   }
 
 })

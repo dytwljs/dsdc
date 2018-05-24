@@ -1,7 +1,17 @@
 {
+<<<<<<< HEAD
+  "pages":[
+    "pages/index/index",
+    "pages/test1/index",
+    "pages/addCgi/addCgi",
+    "pages/test/test",
+    "pages/HomePage/Di_Make/Di_Make",
+   
+=======
   "pages":[ 
     "pages/test/test",
     "pages/login/login",
+>>>>>>> 98ef78d204f6b44a82889cae1c1aa02a7e3ca74a
     "pages/HomePage/Login/Login",
     "pages/HomePage/Di_Make/Di_Make",
    
@@ -9,8 +19,12 @@
     
     "pages/HomePage/Di_Home/Di_Home",
     "pages/HomePage/Di_Poi/Di_Poi",
+<<<<<<< HEAD
+    "pages/login/login"
+=======
     "pages/test1/index",
     "pages/addCgi/addCgi"
+>>>>>>> 98ef78d204f6b44a82889cae1c1aa02a7e3ca74a
   ],
   "window":{
     "backgroundColor":"#F6F6F6",

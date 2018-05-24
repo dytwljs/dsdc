@@ -7,13 +7,13 @@
     {
         "type": "node",
         "request": "launch",
-        "name": "Launch Program",
-        "program": "${workspaceFolder}/Dc/server/app.js"
+        "name": "WS",
+        "program": "${workspaceFolder}/Dc/ws/server.js"
     },
         {
             "type": "node",
             "request": "launch",
-            "name": "启动程序",
+            "name": "Server",
             "program": "${workspaceFolder}/Dc/server/app.js"
         }
     ]

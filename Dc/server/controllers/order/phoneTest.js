@@ -1,21 +1,21 @@
 const configs = require('../../config')
-const daOrder=require('../../da/exphone')
+const daOrder = require('../../da/exphone')
 
-async function get(ctx ,next) {
-// await next();   
-    
-    var id=ctx.query.ids
- //   console.log(id)
-  
-    var ax = daOrder.getByPhone(id,ctx)
+async function get(ctx) {
+    //  await next();   
+
+    var id = ctx.query.ids
+    //   console.log(id)
+
+    var a = daOrder.getByPhone(id,ctx)
     // console.log(".......")
     // console.log(a)
-     ctx.body=ax;
- 
+    ctx.body = a
+
 }
 
 
-module.exports= {
+module.exports = {
     get
-    // post
+// post
 }

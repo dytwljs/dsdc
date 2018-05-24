@@ -8,12 +8,14 @@ const debug=require('debug')('cbd')
 async function getByPhone(UserOpen_id,ctx){
     //console.log(UserOpen_id);
     var result=null
-    await mysql('tuser').select('*').then(res=>{
+   await mysql('tuser').select('*').then(res=>{
         // console.log(res[1])
-        result=JSON.stringify(res[1]);
+        result=JSON.stringify(res[3]);
+        return result
         console.log(result)
-        // ctx.body=result
-        // return result
+        // console.log(ctx)
+        ctx.body=result
+        
         // for(var i=0; i< res.length;i++){
         //     //  console.log(res[i]);
         //     return res[i]

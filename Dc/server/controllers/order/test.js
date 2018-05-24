@@ -8,8 +8,8 @@ async function get (ctx, next) {
     var names=ctx.query.username;
     console.log(names)
     
-    daOrder.createOrder(sets,names)
-    ctx.body = 'success'
+  var a=  daOrder.createOrder(sets,names)
+    ctx.body = a
 }
 async function post (ctx, next) {
     ctx.body = 'success'

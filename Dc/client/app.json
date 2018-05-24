@@ -1,14 +1,15 @@
 {
   "pages":[ 
-    "pages/HomePage/Di_Make/Di_Make",
     "pages/test/test",
-   
+    "pages/login/login",
     "pages/HomePage/Login/Login",
+    "pages/HomePage/Di_Make/Di_Make",
+   
+   
+    
     "pages/HomePage/Di_Home/Di_Home",
     "pages/HomePage/Di_Poi/Di_Poi",
-    
     "pages/test1/index",
-    "pages/login/login",
     "pages/addCgi/addCgi"
   ],
   "window":{

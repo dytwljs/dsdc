@@ -71,9 +71,9 @@ Page({
  
  
   getPhoneNumber:function(e){ 
-    console.log("状态   :"+e.detail.errMsg)
-    console.log("iv  :"+e.detail.iv)
-    console.log("encryptedData   :" +e.detail.encryptedData)
+    // console.log("状态   :"+e.detail.errMsg)
+    // console.log("iv  :"+e.detail.iv)
+    // console.log("encryptedData   :" +e.detail.encryptedData)
     var pc = new WXBizDataCrypt(APPID, SessionKey)
     var data = pc.decryptData(e.detail.encryptedData, e.detail.iv)
     console.log('解密后data: ', data)

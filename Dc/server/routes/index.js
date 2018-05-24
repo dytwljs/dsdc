@@ -36,4 +36,6 @@ const router = require('koa-router')({
 const controllers = require('../controllers/order')
 router.get('/order', controllers.test.get)
 
+router.get('/getbyphone',controllers.phoneTest.get)
+
 module.exports = router

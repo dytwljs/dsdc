@@ -1,15 +1,15 @@
 {
-  "pages":[ 
-    "pages/HomePage/Di_Make/Di_Make",
+  "pages":[
+    "pages/index/index",
+    "pages/test1/index",
+    "pages/addCgi/addCgi",
     "pages/test/test",
+    "pages/HomePage/Di_Make/Di_Make",
    
     "pages/HomePage/Login/Login",
     "pages/HomePage/Di_Home/Di_Home",
     "pages/HomePage/Di_Poi/Di_Poi",
-    
-    "pages/test1/index",
-    "pages/login/login",
-    "pages/addCgi/addCgi"
+    "pages/login/login"
   ],
   "window":{
     "backgroundColor":"#F6F6F6",

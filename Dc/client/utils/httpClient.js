@@ -13,8 +13,10 @@ var Get = (url,options) => {
         url: url,
         header: null,
         method: defaultOptions.method,
-        data: options.data,
+      //  data: options.data,
+        data: {id:1,name:"ssssssssaaa"},
         success: function (result) {
+          // debugger
             var data = result.data;
 
             // // 成功地响应会话信息
@@ -38,6 +40,7 @@ var Get = (url,options) => {
 
         // 响应错误
         fail: function (loginResponseError) {
+          // debugger
             // var error = new LoginError(constants.ERR_LOGIN_FAILED, '登录失败，可能是网络错误或者服务器发生异常');
             // options.fail(error);
         },

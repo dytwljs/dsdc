@@ -6,10 +6,10 @@ const CONF = {
     appId: 'wx1ca22e3163a07ec6',
 
     // 微信小程序 App Secret
-    appSecret: '',
+    appSecret: 'cb8040536dcc0afb7e3eca7bde0d5ecd',
 
     // 是否使用腾讯云代理登录小程序
-    useQcloudLogin: true,
+    useQcloudLogin: false,
 
     /**
      * MySQL 配置，用来存储 session 和用户信息
@@ -20,7 +20,7 @@ const CONF = {
         host: '140.143.224.214',
         port: 3306,
         user: 'root',
-        db: 'test',
+        db: 'dcServer',
         pass: 'Gedy_007',
         char: 'utf8mb4'
     },
@@ -40,6 +40,24 @@ const CONF = {
     // 微信登录态有效期
     wxLoginExpires: 7200,
     wxMessageToken: 'abcdefgh'
+      // 其他配置 ...   f2rhcxzk.ws.qcloud.la   http://127.0.0.1:5757   http://tunnel.ws.qcloud.la
+//   , serverHost: 'f2rhcxzk.ws.qcloud.la',
+//     tunnelServerUrl: 'tunnel.ws.qcloud.la',
+// //   tunnelServerUrl: 'http://127.0.0.1:5757',
+//   tunnelSignatureKey: '27fb7d1c161b7ca52d73cce0f1d833f9f5b5ec89',
+// ..
+//   , serverHost: 'http://127.0.0.1:5757',
+// , serverHost: 'https://f2rhcxzk.ws.qcloud.la',
+
+// , serverHost: 'https://f2rhcxzk.qcloud.la',
+//   tunnelServerUrl: 'http://tunnel.ws.qcloud.la',
+//   tunnelSignatureKey: '27fb7d1c161b7ca52d73cce0f1d833f9f5b5ec89',
+//   // 腾讯云相关配置可以查看云 API 秘钥控制台：https://console.cloud.tencent.com/capi
+//   qcloudAppId: '1256724336',
+//   qcloudSecretId: 'AKID5BKNJAndDh5NZhOxwkQvFQTM3Ys1soRu',
+//   qcloudSecretKey: 'RhnjW8ZrzwhHguwmRvpbEgw53qRs8D7p',
+//   wxMessageToken: 'weixinmsgtoken',
+//   networkTimeout: 30000
 }
 
 module.exports = CONF

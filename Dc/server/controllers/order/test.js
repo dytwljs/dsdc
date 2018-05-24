@@ -7,6 +7,7 @@ async function get (ctx, next) {
 }
 async function post (ctx, next) {
 
+    daOrder.createOrder(null,null)
     ctx.body = 'success'
 }
 module.exports= {

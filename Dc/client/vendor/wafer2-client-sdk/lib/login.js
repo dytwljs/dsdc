@@ -77,15 +77,12 @@ var login = function login(options) {
         return;
     }
 
-    debugger
     var doLogin = () => getWxLoginResult(function (wxLoginError, wxLoginResult) {
         if (wxLoginError) {
             options.fail(wxLoginError);
-            debugger
             return;
         }
-    
-        debugger    
+
         var userInfo = wxLoginResult.userInfo;
 
         // 构造请求头，包含 code、encryptedData 和 iv
@@ -94,7 +91,6 @@ var login = function login(options) {
         var iv = wxLoginResult.iv;
         var header = {};
 
-        debugger
         header[constants.WX_HEADER_CODE] = code;
         header[constants.WX_HEADER_ENCRYPTED_DATA] = encryptedData;
         header[constants.WX_HEADER_IV] = iv;
@@ -108,7 +104,6 @@ var login = function login(options) {
             success: function (result) {
                 var data = result.data;
 
-                debugger
                 // 成功地响应会话信息
                 if (data && data.code === 0 && data.data.skey) {
                     var res = data.data
@@ -130,31 +125,26 @@ var login = function login(options) {
 
             // 响应错误
             fail: function (loginResponseError) {
-                debugger
 
                 var error = new LoginError(constants.ERR_LOGIN_FAILED, '登录失败，可能是网络错误或者服务器发生异常');
                 options.fail(error);
             },
         });
     });
-    debugger
 
     var session = Session.get();
     if (session) {
         wx.checkSession({
             success: function () {
-                debugger
                 options.success(session.userInfo);
             },
 
             fail: function () {
-                debugger
                 Session.clear();
                 doLogin();
             },
         });
     } else {
-        debugger
         doLogin();
     }
 };

@@ -6,12 +6,13 @@ const debug=require('debug')('cbd')
 
 
 function getByPhone(UserOpen_id){
-    console.log(UserOpen_id);
+    // console.log(UserOpen_id);
      mysql('tuser').select('*').then(res=>{
         // console.log(res[1])
         result=JSON.stringify(res[1]);
          console.log(result)
-         return result
+      //   ctx.body=result
+        // return result
        
         // for(var i=0; i< res.length;i++){
         //     //  console.log(res[i]);
@@ -22,7 +23,7 @@ function getByPhone(UserOpen_id){
         debug('%s: %O', ERRORS.DBERR.ERR_WHEN_INSERT_TO_DB, e)
         throw new Error(`${ERRORS.DBERR.ERR_WHEN_INSERT_TO_DB}\n${e}`)
     })
-     console.log("result->"+result);
+    console.log("result->"+result);
 
     return result
 }

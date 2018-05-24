@@ -62,7 +62,7 @@ function createOrder(userInfo,orderInit){
         debug('%s: %O', ERRORS.DBERR.ERR_WHEN_INSERT_TO_DB, e)
         throw new Error(`${ERRORS.DBERR.ERR_WHEN_INSERT_TO_DB}\n${e}`)
     })
-    
+    return "OKss"
 
 }
 function test(username){

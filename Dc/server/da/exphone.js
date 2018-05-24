@@ -5,10 +5,16 @@ const ERRORS = require('./constants').ERRORS
 const debug=require('debug')('cbd')
 
 
+<<<<<<< HEAD
 async function getByPhone(UserOpen_id){
     //console.log(UserOpen_id);
     var result=null
   await  mysql('tuser').select('*').then(res=>{
+=======
+function getByPhone(UserOpen_id){
+    console.log(UserOpen_id);
+     mysql('tuser').select('*').then(res=>{
+>>>>>>> ece01a6ac17fb8b6d431f77dc9f137488649157b
         // console.log(res[1])
         result=JSON.stringify(res[1]);
          console.log(result)

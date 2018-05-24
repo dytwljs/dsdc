@@ -2,11 +2,7 @@ const mysql=require('./mysql')
 const uuidGenerator = require('uuid/v4')
 const moment = require('moment')
 const ERRORS = require('./constants').ERRORS
-<<<<<<< HEAD
 const debug =require('debug')('da_access_order')
-=======
-const debug=require('debug')('cbd')
->>>>>>> 98ef78d204f6b44a82889cae1c1aa02a7e3ca74a
 
 function createOrder(userInfo,orderInit){
     /*

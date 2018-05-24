@@ -5,22 +5,15 @@ const ERRORS = require('./constants').ERRORS
 const debug=require('debug')('cbd')
 
 
-<<<<<<< HEAD
-async function getByPhone(UserOpen_id){
+async function getByPhone(UserOpen_id,ctx){
     //console.log(UserOpen_id);
     var result=null
-  await  mysql('tuser').select('*').then(res=>{
-=======
-function getByPhone(UserOpen_id){
-    // console.log(UserOpen_id);
-     mysql('tuser').select('*').then(res=>{
->>>>>>> ece01a6ac17fb8b6d431f77dc9f137488649157b
+    await mysql('tuser').select('*').then(res=>{
         // console.log(res[1])
         result=JSON.stringify(res[1]);
-         console.log(result)
-      //   ctx.body=result
+        console.log(result)
+        // ctx.body=result
         // return result
-       
         // for(var i=0; i< res.length;i++){
         //     //  console.log(res[i]);
         //     return res[i]
@@ -31,7 +24,6 @@ function getByPhone(UserOpen_id){
         throw new Error(`${ERRORS.DBERR.ERR_WHEN_INSERT_TO_DB}\n${e}`)
     })
     console.log("result->"+result);
-
     return result
 }
 

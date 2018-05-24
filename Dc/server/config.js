@@ -20,14 +20,15 @@ const CONF = {
         host: '140.143.224.214',
         port: 3306,
         user: 'root',
-        db: 'text',
         pass: 'Gedy_007',
+        db: 'text',
+        char: 'utf8mb4'
         // ***************************
         // db: 'dcServer',
         // pass: 'Gedy_007',
         // pass: '123',
         // db: 'cauth',
-        char: 'utf8mb4'
+        
         // host: 'localhost',
         // port: 3306,
         // user: 'root',

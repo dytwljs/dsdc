@@ -60,15 +60,15 @@ const CONF = {
 //   , serverHost: 'http://127.0.0.1:5757',
 // , serverHost: 'https://f2rhcxzk.ws.qcloud.la',
 
-// , serverHost: 'https://f2rhcxzk.qcloud.la',
-//   tunnelServerUrl: 'http://tunnel.ws.qcloud.la',
-//   tunnelSignatureKey: '27fb7d1c161b7ca52d73cce0f1d833f9f5b5ec89',
-//   // 腾讯云相关配置可以查看云 API 秘钥控制台：https://console.cloud.tencent.com/capi
-//   qcloudAppId: '1256724336',
-//   qcloudSecretId: 'AKID5BKNJAndDh5NZhOxwkQvFQTM3Ys1soRu',
-//   qcloudSecretKey: 'RhnjW8ZrzwhHguwmRvpbEgw53qRs8D7p',
-//   wxMessageToken: 'weixinmsgtoken',
-//   networkTimeout: 30000
+, serverHost: 'https://f2rhcxzk.qcloud.la',
+  tunnelServerUrl: 'http://tunnel.ws.qcloud.la',
+  tunnelSignatureKey: '27fb7d1c161b7ca52d73cce0f1d833f9f5b5ec89',
+  // 腾讯云相关配置可以查看云 API 秘钥控制台：https://console.cloud.tencent.com/capi
+  qcloudAppId: '1256724336',
+  qcloudSecretId: 'AKID5BKNJAndDh5NZhOxwkQvFQTM3Ys1soRu',
+  qcloudSecretKey: 'RhnjW8ZrzwhHguwmRvpbEgw53qRs8D7p',
+  wxMessageToken: 'weixinmsgtoken',
+  networkTimeout: 30000
 }
 
 module.exports = CONF

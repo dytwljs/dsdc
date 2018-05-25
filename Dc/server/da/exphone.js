@@ -10,7 +10,7 @@ async function getByPhone(UserOpen_id,ctx){
    var result=null
    await mysql('tuser').select('*').then(res=>{
         // console.log(res[1])
-        result=JSON.stringify(res[3]);
+        result=JSON.stringify(res);
         console.log(result)
         ctx.body=result
         // return result

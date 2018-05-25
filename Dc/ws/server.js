@@ -1,12 +1,12 @@
 const WebSocketServer = require('ws').Server
 
 const wss = new WebSocketServer({ 
-            port: 8080 
+            port: 8181
             ,verifyClient:socketVerify    
         })
 
 function socketVerify (info){
-    Console.log(info)
+    console.log(info)
     console.log(info.origin);  
     console.log(info.req.t);  
     console.log(info.secure);  

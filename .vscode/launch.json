@@ -4,17 +4,26 @@
     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
     {
         "type": "node",
         "request": "launch",
         "name": "WS",
         "program": "${workspaceFolder}/Dc/ws/server.js"
     },
-        {
+    {    
             "type": "node",
             "request": "launch",
             "name": "Server",
             "program": "${workspaceFolder}/Dc/server/app.js"
-        }
+    },
+    {
+            "type": "node",
+            "request": "launch",
+            "name": "app1",
+            "program": "${workspaceFolder}/Dc/server/app1.js"
+    }
+
+
     ]
 }
